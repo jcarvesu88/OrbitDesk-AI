@@ -30,7 +30,8 @@ describe('OrbitDesk API', () => {
   it('returns a dashboard and ticket list', async () => {
     const [dashboard, tickets] = await Promise.all([json('/api/dashboard'), json('/api/tickets')]);
     assert.equal(dashboard.body.total, tickets.body.length);
-    assert.match(tickets.body[0].id, /^INC-/);
+    assert.match(tickets.body[0].id, /^INC\d+$/);
+
   });
 
   it('updates an editable ticket', async () => {
