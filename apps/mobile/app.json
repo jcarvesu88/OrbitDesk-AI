@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "OrbitDesk AI",
+    "slug": "orbitdesk-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.orbitdeskai"
+    },
+    "android": {
+      "package": "com.example.orbitdeskai"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-status-bar"
+    ]
+  }
+}

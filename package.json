@@ -1,0 +1,35 @@
+{
+  "name": "orbitdesk-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Safe synthetic-data IT service desk prototype with web, Expo mobile, API, mock AI, and local RAG.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "predev": "npm run build -w @orbitdesk/shared",
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "npm run dev -w @orbitdesk/web",
+    "dev:api": "npm run dev -w @orbitdesk/api",
+    "dev:mobile": "npm run start -w @orbitdesk/mobile",
+    "build": "npm run build -w @orbitdesk/shared && npm run build -w @orbitdesk/api && npm run build -w @orbitdesk/web",
+    "typecheck": "npm run build -w @orbitdesk/shared && npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "verify": "npm run build && npm run typecheck && npm test",
+    "clean": "node scripts/clean.mjs"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "license": "MIT",
+  "overrides": {
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "@types/react": "19.3.0"
+  }
+}
