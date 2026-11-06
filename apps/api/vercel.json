@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/health",
-      "destination": "/api"
+      "destination": "/index"
     },
     {
       "source": "/api/:path*",
-      "destination": "/api"
+      "destination": "/index"
     }
   ]
 }
